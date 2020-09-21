@@ -21,7 +21,7 @@ Ant wilt create an npm package "riux-x.x.x.tgz" file that you can install direct
 
 ## To use
 
-To use the react project simply import it in your project as just another NPM library.
+To use the library in a new project simply import the library as you import any another NPM library.
 The main requirements of your project is ES6 and loaders  for CSS/SCSS and images PNG/SVG and fonts.
 
 
