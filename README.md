@@ -17,7 +17,7 @@ Install apache ant version 10 or higher. Then run the task "build"
 ```
 ant build
 ```
-Ant wilt create an npm pachate riux-x.x.x.tgz file that you can install directly in your project or deploy it in an npm repository
+Ant wilt create an npm package "riux-x.x.x.tgz" file that you can install directly in your project or deploy it in an npm repository
 
 ## To use
 
