@@ -1,0 +1,64 @@
+// This stlyling is not needed when using a framework.
+
+.riux-form {
+  min-width: 320px;
+  padding: 10px;
+  font-family: Segoe, "Segoe UI", Calibri, Helmet, FreeSans, sans-serif;
+  font-size: 14px;
+  h1 {
+     font-size: 16px;
+    font-weight: bold;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-family: Arial;
+    font-size: 14px;
+    outline: none;
+    padding: 4px;
+  }
+
+  input{box-sizing:border-box}
+
+  label {
+    display: block;
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid $riux-primary-color;
+    border-radius: 5px;
+    color: $riux-text-color;
+    padding: 6px 8px;
+    margin-bottom: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($riux-primary-color, 10%);
+    }
+    &:active {
+      background-color: lighten($riux-primary-color, 5%);
+    }
+  }
+
+  .submit-buttons {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    button {
+      margin-left: 10px;
+      &[type=submit] {
+        background-color: $riux-primary-color;
+      }
+    }
+  }
+
+}
+

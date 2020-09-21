@@ -1,0 +1,222 @@
+// @import './variables';
+
+$dark-background: $riux-default-background-color;
+$navbar-default-link-color: $gray-200;
+$modal-inner-padding:         20px !default;
+$text-color: $riux-text-color;
+
+.luciad .lcdBalloon {
+  z-index: 400;
+  text-decoration: none;
+}
+
+.luciad .lcdBalloon .lcdFrame {
+  position: relative;
+  box-shadow: 5px 5px 2px rgba(45, 54, 71, 0.75);
+  background-color: $riux-default-background-color;
+  border-radius: 4px;
+  border: thin solid $dark-background;
+  background-color: $dark-background;
+//  border: thin solid #464646;
+}
+
+.luciad .lcdBalloon .lcdHeader {
+  border: 1px solid $riux-primary-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: $riux-primary-color;
+  background-image: linear-gradient(lighten($riux-primary-color, 8%), $riux-primary-color 60%, darken($riux-primary-color, 4%));
+  color: $navbar-default-link-color;
+}
+
+.luciad .lcdBalloon .lcdContent {
+  min-width: 200px;
+  max-width: 360px;
+  // padding: 0 10px 0 10px;
+  padding: $modal-inner-padding/2;
+  padding-top: 10px;
+  padding-bottom: 0;
+  overflow: auto;
+  background-color: $dark-background;
+  color: $text-color;
+  font: 12px arial, Helvetica Neue;
+}
+
+.lcdContent {
+  button {
+    float: right;
+    background-color: $riux-primary-color;
+    border: none;
+    border-radius: 5px;
+    color: $riux-text-color;
+    padding: 6px 8px;
+    margin-bottom: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($riux-primary-color, 10%);
+    }
+    &:active {
+      background-color: lighten($riux-primary-color, 5%);
+    }
+  }
+  h1 {
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: $text-color;
+    text-align: center;
+    padding-bottom:10px;
+  }
+  ul {
+    padding:0;
+    list-style-type:none;
+  }
+  li {
+    padding-bottom: 4px;
+  }
+  .balloon-property-name {
+    font-weight: bold;
+  }
+
+  .balloon-text {
+    p {
+      line-height: 1;
+      margin: 0;
+      margin-bottom: 4px;
+      padding: 0;
+    }
+  }
+}
+
+.luciad .lcdBalloon .lcdClose {
+  cursor: pointer;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  right: 3px;
+  background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 Emulated-Glyphicon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" color="white"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  color: darken($navbar-default-link-color, 15%);
+  -moz-background-size: 20px 20px;
+  &:hover{
+    color:lightgray;
+    filter: brightness(0.4); /* IE5+ */
+    -webkit-filter: brightness(0.4); /* Webkit Nightlies & Chrome Canary */
+  }
+  &:active{
+    color:black;
+    filter: brightness(0.25); /* IE5+ */
+    -webkit-filter: brightness(0.25); /* Webkit Nightlies & Chrome Canary */
+  }
+}
+
+.luciad .lcdBalloon .lcdClose:before{
+  top: 5px;
+  font-size: 14px;
+  display: inline-block;
+ // font-family: 'Glyphicons Halflings';
+ // background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 Emulated-Glyphicon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" color="white"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>');
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+ // content: "\e014";
+}
+
+.luciad .lcdBalloon .lcdClose:hover {
+  font-weight: bold;
+  color: darken($navbar-default-link-color, 5%);
+}
+
+.lcdBalloon {
+  .form-control {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.2;
+    border-radius: 3px;
+    select {
+      border: 1px solid black;
+    }
+  }
+  label {
+    padding-top: 6px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .control-label {
+    padding-top: 6px;
+    font-size: 12px;
+  }
+  .input-group-addon {
+    line-height: 1;
+    padding: 6px 12px 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+  }
+  .input-group-btn {
+    padding-top: 0;
+  }
+  .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+  }
+  .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    padding-top: 0px;
+    label{
+      padding-top: 0;
+    }
+  }
+  input[type="radio"], input[type="checkbox"] {
+    line-height: 1.2;
+    margin: 2px 0 0 -20px;
+  }
+  .radio, .checkbox {
+    margin-top: 0;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-left: -20px;
+    margin-top: 0px;
+    line-height: normal;
+  }
+
+}
+
+
+
+.lcdFrame > div:nth-child(3) {
+  border-color: $dark-background;
+  bottom: -14px !important;
+  display: block; position: relative; width: 0px; border-width: 15px 15px 0px; border-style: solid; border-color: rgba(45, 54, 71, 0.75) transparent; left: -9px;
+}
+.lcdFrame > div:nth-child(3):before {
+  content: "";
+  display: block; position: absolute; bottom: -3px; width: 0px; border-width: 15px 15px 0px; border-style: solid; border-color: rgba(45, 54, 71, 0.75) transparent; left: -9px;
+  filter: blur(1px);
+}
+.lcdFrame > div:nth-child(3):after {
+  content: "";
+  display: block; position: absolute; bottom: 1px; width: 0px; border-width: 15px 15px 0px; border-style: solid; border-color: $riux-default-background-color transparent; left: -15px;
+}
+
+.lcdFrame > div:nth-child(3):after {
+  border-color: $dark-background transparent;
+}

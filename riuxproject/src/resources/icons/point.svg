@@ -1,0 +1,15 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+ <style>.colorFill { fill:#fff }</style>
+
+ <metadata>Svg Vector Icons : http://www.onlinewebfonts.com/icon</metadata>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="602" width="802" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_1">
+   <path stroke="null" id="svg_2" d="m499.99999,245.5563c-134.37915,0 -243.33254,113.92847 -243.33254,254.4437s108.95339,254.4437 243.33254,254.4437s243.33254,-113.92847 243.33254,-254.4437s-108.95339,-254.4437 -243.33254,-254.4437zm0,445.27648c-100.8092,0 -182.49941,-85.42039 -182.49941,-190.83278c0,-105.41239 81.69021,-190.83278 182.49941,-190.83278s182.49941,85.42039 182.49941,190.83278c0,105.41239 -81.69021,190.83278 -182.49941,190.83278z" class="colorFill"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,17 @@
+.rulerLabel {
+/*  font: bold 11px/1 "Helvetica Neue", Arial, Helvetica, sans-serif; */
+  font: bold 11px/1 sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-color: rgba(173,218,230, 0.33); // #addae6;
+  padding: 6px;
+  margin: 4px;
+  border: 2px dotted white;
+  border-radius: 5px;
+}
+
+.rulerPointLabel {
+  font: bold 11px/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

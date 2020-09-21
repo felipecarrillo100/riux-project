@@ -1,0 +1,91 @@
+<project>
+  <property name="basedir.src.dir" value="${basedir}/riuxproject"/>
+  <property name="basedir.destination.dir" value="${basedir}/riux"/>
+  <property name="basedir.destination.src.dir" value="${basedir.destination.dir}/src"/>
+  <property name="basedir.packagejson.dir" value="${basedir}/package"/>
+  <property name="basedir.dist.dir" value="${basedir}/dist"/>
+
+  <target name="clean" depends="clean_dist, clean_tmp"></target>
+
+  <target name="clean_dist">
+    <delete dir="${basedir.dist.dir}"/>
+  </target>
+
+  <target name="clean_tmp">
+    <delete dir="${basedir.destination.dir}"/>
+  </target>
+
+  <target name="copyall">
+    <mkdir dir="${basedir.destination.dir}"/>
+    <copy todir="${basedir.destination.src.dir}/commands" >
+      <fileset dir="${basedir.src.dir}/src/commands" includes="**"/>
+    </copy>
+    <copy todir="${basedir.destination.src.dir}/components" >
+      <fileset dir="${basedir.src.dir}/src/components" includes="**"/>
+    </copy>
+    <copy todir="${basedir.destination.src.dir}/fonts" >
+      <fileset dir="${basedir.src.dir}/src/fonts" includes="**"/>
+    </copy>
+    <copy todir="${basedir.destination.src.dir}/resources" >
+      <fileset dir="${basedir.src.dir}/src/resources" includes="**"/>
+    </copy>
+    <copy todir="${basedir.destination.src.dir}/reduxboilerplate" >
+      <fileset dir="${basedir.src.dir}/src/reduxboilerplate" includes="**"/>
+    </copy>
+    <copy todir="${basedir.destination.src.dir}/utils" >
+      <fileset dir="${basedir.src.dir}/src/utils" includes="**"/>
+    </copy>
+    <copy todir="${basedir.destination.src.dir}/types" >
+      <fileset dir="${basedir.src.dir}/src/types" includes="**"/>
+    </copy>
+    <copy todir="${basedir.destination.src.dir}/styles" >
+      <fileset dir="${basedir.src.dir}/src/styles" includes="**"/>
+    </copy>
+    <copy file="${basedir.packagejson.dir}/package.json" todir="${basedir.destination.dir}"/>
+    <copy file="${basedir.packagejson.dir}/index.tsx" todir="${basedir.destination.src.dir}"/>
+    <copy file="${basedir.packagejson.dir}/tsconfig.json" todir="${basedir.destination.dir}"/>
+    <copy file="${basedir.packagejson.dir}/README.md" todir="${basedir.destination.dir}"/>
+  </target>
+
+  <macrodef name="exec-node">
+    <attribute name="module" description="The name of the NodeJS module to execute" />
+    <attribute name="failonerror" default="true" description="Fail if the exit code is not 0" />
+    <attribute name="dir" description="Directory to execute task" />
+    <element name="args" implicit="yes" description="Argument to pass to the exec task" />
+    <sequential>
+      <exec executable="cmd.exe" dir="@{dir}" failonerror="@{failonerror}" osfamily="winnt">
+        <arg line="/c  @{module}" />
+        <args />
+      </exec>
+      <exec executable="@{module}" dir="@{dir}" failonerror="@{failonerror}" osfamily="unix" logError="true">
+        <args />
+      </exec>
+    </sequential>
+  </macrodef>
+
+  <target name="build" depends="copyall">
+    <exec-node dir="${basedir.destination.dir}" module="npm" failonerror="true" >
+      <arg value="install" />
+    </exec-node>
+
+    <exec-node dir="${basedir.destination.dir}" module="npm" failonerror="true" >
+      <arg value="run" />
+      <arg value="build" />
+    </exec-node>
+
+    <exec-node dir="${basedir.destination.dir}" module="npm" failonerror="true" >
+      <arg value="pack" />
+    </exec-node>
+
+    <copy todir="${basedir.dist.dir}">
+      <fileset dir="${basedir.destination.dir}">
+        <include name="*.tgz"/>
+      </fileset>
+    </copy>
+    <delete>
+      <fileset dir="${basedir.destination.dir}" includes="*.tgz"/>
+    </delete>
+    <delete dir="${basedir.destination.dir}"/>
+  </target>
+
+</project>

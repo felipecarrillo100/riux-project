@@ -1,0 +1,224 @@
+$layer-item-primary: lighten($riux-primary-color, 10%);
+
+$background-color-dragging: lighten($riux-primary-color, 20%);
+$underline-color-dragging: $riux-primary-underline-color;
+
+.LayerControl {
+
+    .layer-manager-tree {
+        margin: 0px;
+        background-color: #191E24;
+        background-color: $riux-default-background-color;
+
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;
+    }
+
+    .layer-manager-span {
+        width: 100%;
+        display: inline-block;
+        margin-left: 0px;
+    }
+
+    .layer-manager-span-tools {
+        float: right;
+        padding: 0;
+        padding-right: 0px;
+        width: 70px;
+        display: inline-block;
+    }
+
+    ul.layer-manager-tree {
+        list-style: none;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        padding-right: 0px;
+    }
+
+    .layer-manager-tree ul {
+        list-style: none;
+        padding-left: 5px;
+        margin-bottom: 0px;
+    }
+    .layer-manager-tree ul li {
+        padding-left: 12px;
+        position: relative;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    .layer-manager-span.active {
+        background-color: darken($riux-primary-color, 5%);
+        .layer-manager-label {
+            color: $riux-text-active-color;
+        }
+        .layer-manager-button {
+            color: $riux-text-active-color;
+        }
+        .layer-manager-button-folder {
+            color: $riux-text-active-color;
+        }
+    }
+
+    .layer-manager-span.active:hover {
+        background-color: darken($layer-item-primary, 5%);
+    }
+    .layer-manager-span:hover {
+        background-color: lighten($layer-item-primary, 5%);
+    }
+    .layer-manager-span a:hover {
+        .layer-manager-label {
+            color: $riux-text-hover-color;
+        }
+        .layer-manager-button {
+            color: $riux-text-hover-color;
+            &:hover {
+                color: invert($riux-text-hover-color, 100%);
+            }
+        }
+        .layer-manager-button-folder {
+            color: $riux-text-hover-color;
+        }
+    }
+
+    .layer-manager-span.active a{
+        color: $riux-text-active-color;
+    }
+
+    /*Horizontal line*/
+    .layer-manager-tree ul li:before {
+        content: '';
+        height: 1px;
+        width: 10px;
+        background-color: #848484;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        margin: auto;
+    }
+    /*Vertical line*/
+    .layer-manager-tree ul li::after {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background-color: #848484;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    /*Vertical line*/
+    .layer-manager-tree ul li:last-child::after {
+        height: 10px;
+    }
+
+
+    ul.layer-manager-tree a {
+        cursor: pointer;
+        width: 100%;
+        display: block;
+        padding-left: 0;
+        margin-left: 0px;
+        padding-right: 0px;
+    }
+
+    .layer-manager-button {
+        width: 18px;
+        margin: 0;
+        margin-left: 5px;
+        padding: 0;
+        padding-top: 2px;
+        display: block;
+        height: 17px;
+        text-align: center;
+        // font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        cursor: pointer;
+        box-sizing: border-box;
+        border: none;
+        color: $riux-text-color;
+
+        float: left;
+        display: inline-block;
+    }
+
+    .layer-manager-button:focus { outline: none; }
+
+    .layer-manager-button:hover {
+        color: #000000;
+        border: 1px solid #F1F1F1;
+    }
+
+    .layer-manager-button-folder {
+        margin: 0;
+        padding: 0;
+        float: left;
+        padding-top: 2px;
+        padding-left: 2px;
+        width: 18px;
+        margin: 0;
+        display: inline-block;
+        height: 12px;
+        text-align: center;
+        line-height: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        cursor: pointer;
+        box-sizing: border-box;
+        border: none;
+        color: $riux-text-color;
+    }
+
+    .layer-manager-button-folder:focus { outline: none; }
+
+    .layer-manager-span.drag-start{
+        opacity: 0.25;
+        color: #ffffff;
+    }
+
+    .layer-manager-span.drag-above:not(.drag-start){
+        background-color: $background-color-dragging;
+        border-top: 3px solid $underline-color-dragging;
+        color: black;
+    }
+
+    .layer-manager-span.drag-below:not(.drag-start){
+        background-color: $background-color-dragging;
+        border-bottom: 3px solid $underline-color-dragging;
+        color: black;
+    }
+
+    .layer-manager-label {
+        margin: 0;
+        padding: 0;
+        padding-left: 4px;
+        display: inline-block;
+        max-width: 240px;
+        overflow: hidden;
+        //  font-size: 12px;
+        line-height: 1.4;
+        white-space: nowrap;
+        word-wrap: break-word;
+        color: $riux-text-color;
+    }
+
+    .invisible-layer {
+        .layer-manager-label, .layer-manager-button-folder span {
+            color: gray;
+        }
+    }
+
+}
+

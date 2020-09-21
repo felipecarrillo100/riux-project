@@ -1,0 +1,27 @@
+
+.BingMapsAtribution {
+  pointer-events: none;
+  color: white;
+  position: absolute;
+  left: 10px;
+  bottom: 80px;
+  width: 150px;
+  height: auto;
+  background-color: transparent;
+  line-height: 1.2;
+  font: 9px/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
+ // white-space: nowrap;
+
+  span {
+    display: block;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+
+  img {
+
+  }
+}

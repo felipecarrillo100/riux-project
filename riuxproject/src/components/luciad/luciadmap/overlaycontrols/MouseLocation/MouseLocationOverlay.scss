@@ -1,0 +1,41 @@
+$text-halo-width: 1px; //only works decent for 1px strokes (https://css-tricks.com/adding-stroke-to-web-text/)
+$text-halo-color: black;
+
+.mouseLocation {
+  position: absolute;
+  bottom: 15px;
+  left: 0; right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  font-weight: bold;
+  font-size: 1.175em;
+  cursor: default;
+  text-align: center;
+  color: #fff;
+  text-shadow: #{-$text-halo-width} #{-$text-halo-width} 0 $text-halo-color,
+  $text-halo-width #{-$text-halo-width} 0 $text-halo-color,
+  #{-$text-halo-width} $text-halo-width 0 $text-halo-color,
+  $text-halo-width $text-halo-width 0 $text-halo-color;
+  // z-index: 1;
+  background-color: transparent;
+  pointer-events: none;
+
+  .coordinates {
+    display: inline-block;
+    text-align: right;
+  }
+
+  .height {
+    width: 4.1em;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+

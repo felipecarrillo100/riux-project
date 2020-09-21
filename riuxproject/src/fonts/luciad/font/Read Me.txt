@@ -1,0 +1,11 @@
+The Luciad icon font is created using the Icomoon app.
+
+To modify this font, go to https://icomoon.io/app/ and create a new project.
+
+After creating a new project, add the file "samples/resources/font/{$fontname}/selection.json" to your project using the "import icons" button.
+
+Once the icon font is imported, you can freely deselect, edit or remove icons you don't need.
+
+You can also add your own icons to your project (using the "import icons") or add icons from one of Icomoon's standard libraries (using the "icon library" button).
+
+When finished, select "generate font" at the bottom right, adjust your settings and generate a new, custom font (using the "download" button at the bottom right).

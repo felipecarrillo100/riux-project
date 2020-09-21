@@ -1,0 +1,227 @@
+// @import '../../../../../components/luciad/styles/variables';
+
+// $brand-primary: #153147;
+$brand-primary: $riux-primary-color;
+$inactive-color: #CFD8DC;
+$hover-color: $brand-primary;
+$normal-bg-color: #242C3A;
+$size: 78px;
+$inactive_fade_out_factor: 0.6;
+
+$border-ring-spacing: 4px;
+$border-ring-width: 1px;
+
+$background-color: fade_out($normal-bg-color, $inactive_fade_out_factor);
+$background-hover-color: $normal-bg-color;
+
+$icon-inactive-color: fade_out($inactive-color, $inactive_fade_out_factor);
+$icon-hover-color: lighten($brand-primary, 20%);
+$icon-size: 18px;
+
+$ring-width: 12px;
+$ring-color: hsla(0, 0%, 60%, 0.25);
+$ring-hover-color: $ring-color;
+
+$north-arrow-inactive-color: fade_out($hover-color, $inactive_fade_out_factor);
+$north-arrow-ring-hover-color: $hover-color;
+$north-arrow-hover-color: lighten($north-arrow-ring-hover-color, 30%);
+$north-arrow-length: 12px;
+$north-arrow-width: 12px;
+
+$other-arrow-inactive-color: fade_out($inactive-color, $inactive_fade_out_factor);
+$other-arrow-ring-hover-color: $inactive-color;
+$other-arrow-hover-color: lighten($other-arrow-ring-hover-color, 80%);
+$other-arrow-length: 12px;
+$other-arrow-width: 12px;
+
+.overlay-container-compass {
+  position: relative;
+}
+
+.compass {
+  line-height: 1;
+  font-size:18px;
+  font-family: sans-serif;
+  pointer-events: all;
+  position: absolute;
+  width: $size;
+  height: $size;
+  top: 0px;
+  left: 0px;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  background-color: $background-color;
+  box-shadow: 7px 7px 29px -6px rgba(0, 0, 0, .5);
+  color: $inactive-color;
+  box-sizing: content-box;
+
+  .compassBorder {
+    margin: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: $border-ring-spacing;
+    left: $border-ring-spacing;
+    width: $size - (2 * $border-ring-spacing);
+    height: $size - (2 * $border-ring-spacing);
+    border-radius: ($size - (2 * $border-ring-spacing)) / 2;
+    border: $border-ring-width solid $inactive-color;
+  }
+
+  // hover state overrides
+  &:hover {
+    color: $icon-hover-color;
+    background-color: $background-hover-color;
+
+    .compassIconContainer {
+      .compassIcon {
+        color: $icon-hover-color;
+      }
+    }
+
+    .compassDisplay {
+      .ring {
+        box-sizing: content-box;
+      }
+
+      .north {
+       // border-bottom-color: $north-arrow-ring-hover-color;
+        border-bottom-color: lighten($brand-primary, 20%);
+      }
+
+      .east {
+        border-left-color: $other-arrow-ring-hover-color;
+      }
+
+      .south {
+        border-top-color: $other-arrow-ring-hover-color;
+      }
+
+      .west {
+        border-right-color: $other-arrow-ring-hover-color;
+      }
+
+      .nodrag {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+      }
+    }
+  }
+
+  .compassIconContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .compassIcon {
+      font-size: $icon-size;
+      color: $icon-inactive-color;
+      width: 24px;
+      height: $icon-size;
+      svg {
+        display: block;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .compassDisplay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    .ring {
+      box-sizing: content-box;
+      position: absolute;
+      /*
+      top: $border-ring-spacing + $border-ring-width;
+      left: $border-ring-spacing + $border-ring-width;
+      width: $size - (2 * ($border-ring-spacing + $border-ring-width));
+      height: $size - (2 * ($border-ring-spacing + $border-ring-width));
+      */
+      top:0;
+      left: 0;
+      width: 54px;
+      height: 54px;
+      border: $ring-width solid $ring-color;
+      border-radius: 50%;
+
+      cursor: -webkit-grab;
+      cursor: -moz-grab;
+      cursor: grab;
+
+      &:active {
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+        cursor: grabbing;
+      }
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .north, .south, .west, .east {
+      position: absolute;
+      width: 0;
+      height: 0;
+      cursor: pointer;
+    }
+
+    & .north {
+      left:calc(50% - (#{$north-arrow-width / 2}));
+      top: -($north-arrow-length - $ring-width - $border-ring-spacing);
+      border-left: #{$north-arrow-width / 2} solid transparent;
+      border-right: #{$north-arrow-width / 2} solid transparent;
+      border-bottom: $north-arrow-length solid lighten($brand-primary, 10%);
+
+      &:hover {
+        border-bottom-color: $north-arrow-hover-color;
+      }
+    }
+
+    & .south {
+      left: calc(50% - (#{$other-arrow-width / 2}));
+      bottom: -($other-arrow-length - $ring-width - $border-ring-spacing);
+      border-left: #{$other-arrow-width / 2} solid transparent;
+      border-right: #{$other-arrow-width / 2} solid transparent;
+      border-top: $other-arrow-length solid $other-arrow-inactive-color;
+
+      &:hover {
+        border-top-color: $other-arrow-hover-color;
+      }
+    }
+
+    & .west {
+      top: calc(50% - (#{$other-arrow-width / 2}));
+      left: -($other-arrow-length - $ring-width - $border-ring-spacing);
+      border-top: #{$other-arrow-width / 2} solid transparent;
+      border-bottom: #{$other-arrow-width / 2} solid transparent;
+      border-right: $other-arrow-length solid $other-arrow-inactive-color;
+
+      &:hover {
+        border-right-color: $other-arrow-hover-color;
+      }
+    }
+
+    & .east {
+      top: calc(50% - (#{$other-arrow-width / 2}));
+      right: -($other-arrow-length - $ring-width - $border-ring-spacing);
+      border-top: #{$other-arrow-width / 2} solid transparent;
+      border-bottom: #{$other-arrow-width / 2} solid transparent;
+      border-left: $other-arrow-length solid $other-arrow-inactive-color;
+
+      &:hover {
+        border-left-color: $other-arrow-hover-color;
+      }
+    }
+  }
+}

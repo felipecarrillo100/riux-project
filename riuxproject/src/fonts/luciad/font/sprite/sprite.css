@@ -1,0 +1,466 @@
+.luciad-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-Redo {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-Undo {
+  width: 32px;
+  height: 32px;
+  background-position: -64px 0;
+}
+.icon-CaretLeft {
+  width: 32px;
+  height: 32px;
+  background-position: -128px 0;
+}
+.icon-CaretUp {
+  width: 32px;
+  height: 32px;
+  background-position: -192px 0;
+}
+.icon-CaretRight {
+  width: 32px;
+  height: 32px;
+  background-position: -256px 0;
+}
+.icon-CaretDown {
+  width: 32px;
+  height: 32px;
+  background-position: -320px 0;
+}
+.icon-ArrowLeft {
+  width: 32px;
+  height: 32px;
+  background-position: -384px 0;
+}
+.icon-ArrowUp {
+  width: 32px;
+  height: 32px;
+  background-position: -448px 0;
+}
+.icon-ArrowRight {
+  width: 32px;
+  height: 32px;
+  background-position: -512px 0;
+}
+.icon-ArrowDown {
+  width: 32px;
+  height: 32px;
+  background-position: -576px 0;
+}
+.icon-MoveLeft {
+  width: 32px;
+  height: 32px;
+  background-position: -640px 0;
+}
+.icon-MoveUp {
+  width: 32px;
+  height: 32px;
+  background-position: -704px 0;
+}
+.icon-MoveRight {
+  width: 32px;
+  height: 32px;
+  background-position: -768px 0;
+}
+.icon-MoveDown {
+  width: 32px;
+  height: 32px;
+  background-position: -832px 0;
+}
+.icon-ToLeft {
+  width: 32px;
+  height: 32px;
+  background-position: -896px 0;
+}
+.icon-ToTop {
+  width: 32px;
+  height: 32px;
+  background-position: -960px 0;
+}
+.icon-ToRight {
+  width: 32px;
+  height: 32px;
+  background-position: -1024px 0;
+}
+.icon-ToBottom {
+  width: 32px;
+  height: 32px;
+  background-position: -1088px 0;
+}
+.icon-Stop {
+  width: 32px;
+  height: 32px;
+  background-position: -1152px 0;
+}
+.icon-Pause {
+  width: 32px;
+  height: 32px;
+  background-position: -1216px 0;
+}
+.icon-Play {
+  width: 32px;
+  height: 32px;
+  background-position: -1280px 0;
+}
+.icon-DoubleCaretV {
+  width: 32px;
+  height: 32px;
+  background-position: -1344px 0;
+}
+.icon-DoubleCaretVI {
+  width: 32px;
+  height: 32px;
+  background-position: -1408px 0;
+}
+.icon-DoubleCaretH {
+  width: 32px;
+  height: 32px;
+  background-position: -1472px 0;
+}
+.icon-DoubleCaretHI {
+  width: 32px;
+  height: 32px;
+  background-position: -1536px 0;
+}
+.icon-Close {
+  width: 32px;
+  height: 32px;
+  background-position: -1600px 0;
+}
+.icon-Check {
+  width: 32px;
+  height: 32px;
+  background-position: -1664px 0;
+}
+.icon-Plus {
+  width: 32px;
+  height: 32px;
+  background-position: -1728px 0;
+}
+.icon-Minus {
+  width: 32px;
+  height: 32px;
+  background-position: -1792px 0;
+}
+.icon-DrawPoint {
+  width: 32px;
+  height: 32px;
+  background-position: -1856px 0;
+}
+.icon-Forbidden {
+  width: 32px;
+  height: 32px;
+  background-position: -1920px 0;
+}
+.icon-OK {
+  width: 32px;
+  height: 32px;
+  background-position: -1984px 0;
+}
+.icon-Info {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -64px;
+}
+.icon-Error {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -64px;
+}
+.icon-Unknown {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -64px;
+}
+.icon-Warning {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -64px;
+}
+.icon-Text {
+  width: 32px;
+  height: 32px;
+  background-position: -256px -64px;
+}
+.icon-DrawText {
+  width: 32px;
+  height: 32px;
+  background-position: -320px -64px;
+}
+.icon-Select {
+  width: 32px;
+  height: 32px;
+  background-position: -384px -64px;
+}
+.icon-Fit {
+  width: 32px;
+  height: 32px;
+  background-position: -448px -64px;
+}
+.icon-Selectable {
+  width: 32px;
+  height: 32px;
+  background-position: -512px -64px;
+}
+.icon-Cursor {
+  width: 32px;
+  height: 32px;
+  background-position: -576px -64px;
+}
+.icon-Hand {
+  width: 32px;
+  height: 32px;
+  background-position: -640px -64px;
+}
+.icon-Lines {
+  width: 32px;
+  height: 32px;
+  background-position: -704px -64px;
+}
+.icon-LineStyles {
+  width: 32px;
+  height: 32px;
+  background-position: -768px -64px;
+}
+.icon-LineStroke {
+  width: 32px;
+  height: 32px;
+  background-position: -832px -64px;
+}
+.icon-LineWidth {
+  width: 32px;
+  height: 32px;
+  background-position: -896px -64px;
+}
+.icon-Upload {
+  width: 32px;
+  height: 32px;
+  background-position: -960px -64px;
+}
+.icon-Download {
+  width: 32px;
+  height: 32px;
+  background-position: -1024px -64px;
+}
+.icon-Grid {
+  width: 32px;
+  height: 32px;
+  background-position: -1088px -64px;
+}
+.icon-BarChart {
+  width: 32px;
+  height: 32px;
+  background-position: -1152px -64px;
+}
+.icon-LineChart {
+  width: 32px;
+  height: 32px;
+  background-position: -1216px -64px;
+}
+.icon-Height {
+  width: 32px;
+  height: 32px;
+  background-position: -1280px -64px;
+}
+.icon-HeightUp {
+  width: 32px;
+  height: 32px;
+  background-position: -1344px -64px;
+}
+.icon-HeightDown {
+  width: 32px;
+  height: 32px;
+  background-position: -1408px -64px;
+}
+.icon-Sun {
+  width: 32px;
+  height: 32px;
+  background-position: -1472px -64px;
+}
+.icon-Search {
+  width: 32px;
+  height: 32px;
+  background-position: -1536px -64px;
+}
+.icon-Edit {
+  width: 32px;
+  height: 32px;
+  background-position: -1600px -64px;
+}
+.icon-FolderClosed {
+  width: 32px;
+  height: 32px;
+  background-position: -1664px -64px;
+}
+.icon-Folder {
+  width: 32px;
+  height: 32px;
+  background-position: -1728px -64px;
+}
+.icon-Copy {
+  width: 32px;
+  height: 32px;
+  background-position: -1792px -64px;
+}
+.icon-Delete {
+  width: 32px;
+  height: 32px;
+  background-position: -1856px -64px;
+}
+.icon-Locked {
+  width: 32px;
+  height: 32px;
+  background-position: -1920px -64px;
+}
+.icon-Unlocked {
+  width: 32px;
+  height: 32px;
+  background-position: -1984px -64px;
+}
+.icon-Label {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -128px;
+}
+.icon-Compare {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -128px;
+}
+.icon-Visible {
+  width: 32px;
+  height: 32px;
+  background-position: -128px -128px;
+}
+.icon-FillColor {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -128px;
+}
+.icon-Layer {
+  width: 32px;
+  height: 32px;
+  background-position: -256px -128px;
+}
+.icon-LayerProperties {
+  width: 32px;
+  height: 32px;
+  background-position: -320px -128px;
+}
+.icon-LineColor {
+  width: 32px;
+  height: 32px;
+  background-position: -384px -128px;
+}
+.icon-Location {
+  width: 32px;
+  height: 32px;
+  background-position: -448px -128px;
+}
+.icon-Center {
+  width: 32px;
+  height: 32px;
+  background-position: -512px -128px;
+}
+.icon-Longitude {
+  width: 32px;
+  height: 32px;
+  background-position: -576px -128px;
+}
+.icon-Latitude {
+  width: 32px;
+  height: 32px;
+  background-position: -640px -128px;
+}
+.icon-LongLat {
+  width: 32px;
+  height: 32px;
+  background-position: -704px -128px;
+}
+.icon-World {
+  width: 32px;
+  height: 32px;
+  background-position: -768px -128px;
+}
+.icon-Picture {
+  width: 32px;
+  height: 32px;
+  background-position: -832px -128px;
+}
+.icon-Raster {
+  width: 32px;
+  height: 32px;
+  background-position: -896px -128px;
+}
+.icon-Measure {
+  width: 32px;
+  height: 32px;
+  background-position: -960px -128px;
+}
+.icon-Defense {
+  width: 32px;
+  height: 32px;
+  background-position: -1024px -128px;
+}
+.icon-Shapes {
+  width: 32px;
+  height: 32px;
+  background-position: -1088px -128px;
+}
+.icon-Route {
+  width: 32px;
+  height: 32px;
+  background-position: -1152px -128px;
+}
+.icon-Rectangle {
+  width: 32px;
+  height: 32px;
+  background-position: -1216px -128px;
+}
+.icon-Hexagon {
+  width: 32px;
+  height: 32px;
+  background-position: -1280px -128px;
+}
+.icon-RoutePim {
+  width: 32px;
+  height: 32px;
+  background-position: -1344px -128px;
+}
+.icon-Save {
+  width: 32px;
+  height: 32px;
+  background-position: -1408px -128px;
+}
+.icon-Table {
+  width: 32px;
+  height: 32px;
+  background-position: -1472px -128px;
+}
+.icon-Dots {
+  width: 32px;
+  height: 32px;
+  background-position: -1536px -128px;
+}
+.icon-LogoLuciad {
+  width: 117px;
+  height: 32px;
+  background-position: -1600px -128px;
+}
+.icon-LogoHexagon {
+  width: 159px;
+  height: 32px;
+  background-position: -1792px -128px;
+}
+.icon-LogoHexagon-bug {
+  width: 27px;
+  height: 32px;
+  background-position: 0 -192px;
+}
+

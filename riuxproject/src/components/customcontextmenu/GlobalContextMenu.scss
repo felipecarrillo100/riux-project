@@ -1,0 +1,50 @@
+@import "~react-contexify/dist/ReactContexify.min.css";
+
+.react-contexify {
+    z-index: 1000001;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+
+    pointer-events: none;
+
+    .react-contexify__item__content {
+        pointer-events: all;
+
+        .item-row{
+            min-width: 100%;
+            // width: 300px;
+
+            .title-span {
+                padding-right: 5px;
+            }
+            .icon-span {
+                margin-right: 6px;
+                margin-top: 1px;
+            }
+        }
+    }
+
+    .react-contexify__item:not(.react-contexify__item--disabled):hover > .react-contexify__item__content {
+        color: $riux-context-menu-color;
+        background-color: $riux-context-menu-background-color;
+    }
+
+    .react-contexify__submenu-arrow {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    .CheckboxInContextmenu {
+        float: right;
+        margin-top: 3px;
+        line-height: 1;
+        width: 14px;
+        width: 14px;
+    }
+
+    .CheckboxInContextmenu.disabled {
+        /* color: $btn-link-disabled-color; */
+    }
+
+}

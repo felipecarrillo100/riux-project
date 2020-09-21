@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'LuciadRIA';
+  src:
+    url('./fonts/LuciadRIA.ttf?ljfr9a') format('truetype'),
+    url('./fonts/LuciadRIA.woff?ljfr9a') format('woff'),
+    url('./fonts/LuciadRIA.svg?ljfr9a#LuciadRIA') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.lcdIcon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'LuciadRIA' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lcdIconCounterClockwise:before {
+  content: "\e965";
+}
+.lcdIconClockwise:before {
+  content: "\e966";
+}
+.lcdIconRedo:before {
+  content: "\e900";
+}
+.lcdIconUndo:before {
+  content: "\e901";
+}
+.lcdIconCaretLeft:before {
+  content: "\e902";
+}
+.lcdIconCaretUp:before {
+  content: "\e903";
+}
+.lcdIconCaretRight:before {
+  content: "\e904";
+}
+.lcdIconCaretDown:before {
+  content: "\e905";
+}
+.lcdIconArrowLeft:before {
+  content: "\e906";
+}
+.lcdIconArrowUp:before {
+  content: "\e907";
+}
+.lcdIconArrowRight:before {
+  content: "\e908";
+}
+.lcdIconArrowDown:before {
+  content: "\e909";
+}
+.lcdIconMoveLeft:before {
+  content: "\e90a";
+}
+.lcdIconMoveUp:before {
+  content: "\e90b";
+}
+.lcdIconMoveRight:before {
+  content: "\e90c";
+}
+.lcdIconMoveDown:before {
+  content: "\e90d";
+}
+.lcdIconToLeft:before {
+  content: "\e90e";
+}
+.lcdIconToTop:before {
+  content: "\e90f";
+}
+.lcdIconToRight:before {
+  content: "\e910";
+}
+.lcdIconToBottom:before {
+  content: "\e911";
+}
+.lcdIconStop:before {
+  content: "\e912";
+}
+.lcdIconPause:before {
+  content: "\e913";
+}
+.lcdIconPlay:before {
+  content: "\e914";
+}
+.lcdIconDoubleCaretV:before {
+  content: "\e915";
+}
+.lcdIconDoubleCaretVI:before {
+  content: "\e916";
+}
+.lcdIconDoubleCaretH:before {
+  content: "\e917";
+}
+.lcdIconDoubleCaretHI:before {
+  content: "\e918";
+}
+.lcdIconClose:before {
+  content: "\e919";
+}
+.lcdIconCheck:before {
+  content: "\e91a";
+}
+.lcdIconPlus:before {
+  content: "\e91b";
+}
+.lcdIconMinus:before {
+  content: "\e91c";
+}
+.lcdIconDrawPoint:before {
+  content: "\e91d";
+}
+.lcdIconForbidden:before {
+  content: "\e91e";
+}
+.lcdIconOK:before {
+  content: "\e91f";
+}
+.lcdIconInfo:before {
+  content: "\e920";
+}
+.lcdIconError:before {
+  content: "\e921";
+}
+.lcdIconUnknown:before {
+  content: "\e922";
+}
+.lcdIconWarning:before {
+  content: "\e923";
+}
+.lcdIconText:before {
+  content: "\e924";
+}
+.lcdIconDrawText:before {
+  content: "\e925";
+}
+.lcdIconSelect:before {
+  content: "\e926";
+}
+.lcdIconFit:before {
+  content: "\e927";
+}
+.lcdIconSelectable:before {
+  content: "\e928";
+}
+.lcdIconCursor:before {
+  content: "\e929";
+}
+.lcdIconHand:before {
+  content: "\e92a";
+}
+.lcdIconLines:before {
+  content: "\e92b";
+}
+.lcdIconLineStyles:before {
+  content: "\e92c";
+}
+.lcdIconLineStroke:before {
+  content: "\e92d";
+}
+.lcdIconLineWidth:before {
+  content: "\e92e";
+}
+.lcdIconUpload:before {
+  content: "\e92f";
+}
+.lcdIconDownload:before {
+  content: "\e930";
+}
+.lcdIconGrid:before {
+  content: "\e931";
+}
+.lcdIconBarChart:before {
+  content: "\e932";
+}
+.lcdIconLineChart:before {
+  content: "\e933";
+}
+.lcdIconHeight:before {
+  content: "\e934";
+}
+.lcdIconHeightUp:before {
+  content: "\e935";
+}
+.lcdIconHeightDown:before {
+  content: "\e936";
+}
+.lcdIconSun:before {
+  content: "\e937";
+}
+.lcdIconSearch:before {
+  content: "\e938";
+}
+.lcdIconEdit:before {
+  content: "\e939";
+}
+.lcdIconFolderClosed:before {
+  content: "\e95b";
+}
+.lcdIconFolder:before {
+  content: "\e93a";
+}
+.lcdIconCopy:before {
+  content: "\e93b";
+}
+.lcdIconDelete:before {
+  content: "\e93c";
+}
+.lcdIconLocked:before {
+  content: "\e93d";
+}
+.lcdIconUnlocked:before {
+  content: "\e93e";
+}
+.lcdIconLabel:before {
+  content: "\e93f";
+}
+.lcdIconCompare:before {
+  content: "\e940";
+}
+.lcdIconVisible:before {
+  content: "\e941";
+}
+.lcdIconFillColor:before {
+  content: "\e942";
+}
+.lcdIconLayer:before {
+  content: "\e943";
+}
+.lcdIconLayerProperties:before {
+  content: "\e944";
+}
+.lcdIconLineColor:before {
+  content: "\e945";
+}
+.lcdIconLocation:before {
+  content: "\e946";
+}
+.lcdIconCenter:before {
+  content: "\e947";
+}
+.lcdIconLongitude:before {
+  content: "\e948";
+}
+.lcdIconLatitude:before {
+  content: "\e949";
+}
+.lcdIconLongLat:before {
+  content: "\e94a";
+}
+.lcdIconWorld:before {
+  content: "\e94b";
+}
+.lcdIconPicture:before {
+  content: "\e94c";
+}
+.lcdIconRaster:before {
+  content: "\e94d";
+}
+.lcdIconMeasure:before {
+  content: "\e94e";
+}
+.lcdIconDefense:before {
+  content: "\e94f";
+}
+.lcdIconShapes:before {
+  content: "\e950";
+}
+.lcdIconRoute:before {
+  content: "\e951";
+}
+.lcdIconRectangle:before {
+  content: "\e952";
+}
+.lcdIconHexagon:before {
+  content: "\e953";
+}
+.lcdIconRoutePim:before {
+  content: "\e954";
+}
+.lcdIconSave:before {
+  content: "\e955";
+}
+.lcdIconTable:before {
+  content: "\e956";
+}
+.lcdIconDots:before {
+  content: "\e957";
+}
+.lcdIconLogoLuciad:before {
+  content: "\e958";
+}
+.lcdIconLogoHexagon:before {
+  content: "\e959";
+}
+.lcdIconLogoHexagon-bug:before {
+  content: "\e95a";
+}

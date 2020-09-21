@@ -1,0 +1,15 @@
+export enum LayerTypes {
+  AIXMVectorLayer = 'AIXMVectorLayer',
+  FIXMVectorLayer = 'FIXMVectorLayer',
+  WFSLayer = 'WFSLayer',
+  WFS3Layer = 'WFS3Layer',
+  WMSLayer = 'WMSLayer',
+  TMSLayer = 'TMSLayer',
+  BingMapsLayer = 'BingMapsLayer',
+  LTSLayer = 'LTSLayer',
+  GeoJSONFileLayer = 'GeoJSONFileLayer',
+  LayerGroup = "LayerGroup",
+  GridLayer = "GridLayer",
+  EditableFeatureLayer = "EditableFeatureLayer",
+  Root = "root",
+}

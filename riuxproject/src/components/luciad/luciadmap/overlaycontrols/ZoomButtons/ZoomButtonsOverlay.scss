@@ -1,0 +1,33 @@
+$text-halo-width: 1px; //only works decent for 1px strokes (https://css-tricks.com/adding-stroke-to-web-text/)
+$text-halo-color: black;
+
+.ZoomButtonsOverlay {
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 32px;
+  height: 64px;
+
+  .zoomButton {
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 50%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    &:hover {
+      color: lightgray;
+    }
+    &:focus {
+      border: none;
+    }
+    &:active {
+      color: gray;
+    }
+  }
+}
+

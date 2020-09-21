@@ -1,0 +1,83 @@
+$EM-BUTTON-SIZE: 48px;
+
+.EditAndMeasureHolder {
+  position: absolute;
+  right: 0;
+  top: 0
+}
+
+.EditAndMeasure {
+  // width: auto;
+  width: 150px;
+  height: auto;
+  background-color: $riux-default-background-color;
+  color: $riux-text-color;
+
+  .EMSection {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .EMLabel {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .EMControls {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-family: Arial;
+    font-size: 13px;
+    outline: none;
+    padding: 3px;
+    padding-right: 0;
+  }
+
+  input.EMControls{
+    box-sizing:border-box;
+  }
+
+  .edit-measure-panels {
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: inline-block;
+   //  display: block;
+    background-color: transparent;
+
+    .EMButton {
+      font-size: 10px;
+      background-color: darken($riux-default-background-color, 5%);
+      color: $riux-text-color;
+      padding: 5px;
+      width: $EM-BUTTON-SIZE;
+      height: $EM-BUTTON-SIZE;
+      text-decoration: none;
+      display: inline-block;
+      outline: none;
+      border: 1px solid gray;
+      overflow: hidden;
+
+      &:hover {
+        background-color: lighten($riux-default-background-color, 5%);
+      }
+
+      &.active {
+      //  background-color: lighten($riux-default-background-color, 10%);
+        background-color: $riux-primary-color;
+        border-top: 1px solid #595959;
+        border-left: 1px solid #595959;
+      }
+
+      &.active:hover {
+//        background-color: lighten($riux-default-background-color, 15%);
+        background-color: lighten($riux-primary-color, 15%);
+      }
+    }
+  }
+}

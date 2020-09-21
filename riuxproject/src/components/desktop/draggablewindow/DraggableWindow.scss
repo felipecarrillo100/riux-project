@@ -1,0 +1,124 @@
+
+$header-bk-color: $riux-modal-header-background-color;
+$header-color: $riux-modal-header-text-color;
+$body-bk-color: $riux-modal-content-background-color;
+$border-color: black;
+
+.react-draggable.box-window  {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: $body-bk-color;
+  border: thin solid $border-color;
+  border-radius: 5px;
+  min-height: 25px;
+  // max-height: 100%;
+  min-width: 100px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  overflow: hidden;
+
+  .no-cursor {
+    cursor: auto;
+  }
+
+  .cursor {
+    cursor: grab;
+
+    div.header {
+      min-height: 30px;
+      position: relative;
+      color: $header-color;
+      background: $header-bk-color;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      display: block;
+      padding: 0px 0px;
+      line-height: 2;
+
+      .header-title {
+        padding-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+      }
+
+      user-select: none; /* supported by Chrome and Opera */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+
+      .close-button {
+        position: absolute;
+        right: 3px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        color:white;
+
+        background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 Emulated-Glyphicon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" color="white"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>');
+        background-size: 70%;
+        background-repeat: no-repeat;
+
+        &:hover{
+          color:lightgray;
+          filter: brightness(0.4); /* IE5+ */
+          -webkit-filter: brightness(0.4); /* Webkit Nightlies & Chrome Canary */
+        }
+        &:active{
+          color:black;
+          filter: brightness(0.25); /* IE5+ */
+          -webkit-filter: brightness(0.25); /* Webkit Nightlies & Chrome Canary */
+        }
+      }
+
+      .close-button:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      //  content: "\d7";
+        font-size: 20px;
+        line-height: 16px;
+        text-align: center;
+      }
+    }
+  }
+
+  .body-content {
+    /* Firefox */
+    max-height: -moz-calc(100vh - 70px);
+    /* WebKit */
+    max-height: -webkit-calc(100vh - 70px);
+    /* Opera */
+    max-height: -o-calc(100vh - 70px);
+    /* Standard */
+    max-height: calc(100vh - 70px);
+
+    max-width:100vw;
+    background-color: $body-bk-color;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: $riux-modal-content-text-color;
+  }
+
+  form {
+    padding: 10px;
+  //  max-height: 640px;
+  }
+}
+
+.react-draggable.box-window.react-draggable-dragging {
+  .cursor {
+    cursor: grabbing;
+  }
+}
+
+
+

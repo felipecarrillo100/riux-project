@@ -1,0 +1,30 @@
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$riux-default-background-color: $gray-900;
+$riux-primary-color:  #007bff;
+$riux-primary-underline-color: #44ff00;
+$riux-text-color: $gray-100;
+$riux-text-active-color: $gray-100;
+$riux-text-hover-color: $gray-100;
+
+/******** Context Menu / You can select context menu theme dark/liht from the react props ************/
+$riux-context-menu-color: white;
+$riux-context-menu-background-color: $riux-primary-color;
+
+/******** Modal & Windows ************/
+$riux-modal-header-background-color: $riux-primary-color;
+$riux-modal-header-text-color: $riux-text-color;
+$riux-modal-content-background-color: $riux-default-background-color;
+$riux-modal-content-text-color: $riux-text-color;
+
+

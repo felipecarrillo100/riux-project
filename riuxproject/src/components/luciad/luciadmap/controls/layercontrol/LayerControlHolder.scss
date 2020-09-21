@@ -1,0 +1,18 @@
+.LayerControlHolder {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  max-width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+
+  .container {
+    position: relative;
+    pointer-events: auto;
+    height: 100%;
+    margin: 5px;
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

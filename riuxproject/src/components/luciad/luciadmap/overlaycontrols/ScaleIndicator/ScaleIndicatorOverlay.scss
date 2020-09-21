@@ -1,0 +1,84 @@
+$brand-primary: white;
+$hover-light-color:lighten($brand-primary, 20%);
+
+.scaleIndicator {
+  width: 150px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+
+  .scaleIndicatorText {
+    width: 100%;
+    height: 15px;
+    position: relative;
+    bottom: 3px;
+    right: 0;
+    // color: white;
+    font-size: .8em;
+    font-weight: inherit;
+    text-shadow: black 1px 1px 0px,
+    black 1px -1px 0px,
+    black -1px 1px 0px,
+    black -1px -1px 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-family: inherit;
+    text-align: center;
+  }
+
+  .scaleRatioText {
+    width: 100%;
+    height: 15px;
+    // color: white;
+    font-size: .8em;
+    font-weight: inherit;
+    text-shadow: black 1px 1px 0px, black 1px -1px 0px, black -1px 1px 0px, black -1px -1px 0px;
+    padding: 3px 0px 0px;
+    font-family: inherit;
+    text-align: center;
+  }
+
+  /*
+   Do not change positioning parameters (position, top, left,...) and width of foreground and background classes.
+   These are manipulated by ScaleIndicator.js!
+  */
+  .scaleIndicatorForeground {
+    background-color: black;
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .scaleIndicatorBackground {
+    width: 100%;
+    height: 6px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    border: 1px solid darkgray;
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  &:hover{
+    color: $hover-light-color;
+    .scaleIndicatorBackground {
+      background-color: $hover-light-color;
+    }
+  }
+
+  .no-text-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+  }
+}
