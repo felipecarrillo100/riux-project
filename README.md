@@ -59,7 +59,7 @@ Now you are ready to use the RIUX components in your library.
 
 ### Redux 
 Redux is optional but you will require to use Redux to take the full advantage of RIUX.
-The architechture based on command relay on Redux to pass the command from one UI element to another.
+The architechture based on commands depends on Redux to pass the command from one UI element to another in an efficient way.
 If for some reason you prefer not to use Redux you could still pass the commands as PROPS.
 
 
