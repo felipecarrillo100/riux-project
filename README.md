@@ -1,7 +1,7 @@
 # The RIUX project
 
 ## Description
-The RIUX project provides the RIUX-core.  This is a set of React Components that facilitate the creation of a Map Centric Geospatial Application
+The RIUX project provides the RIUX-core.  This is a set of React Components that facilitate the creation of a Map Centric Geospatial Application based on LuciadRIA 2020 or higher
 
 The Main React Components are:
 
@@ -17,11 +17,11 @@ Install apache ant version 10 or higher. Then run the task "build"
 ```
 ant build
 ```
-Ant wilt create an npm pachate riux-x.x.x.tgz file that you can install directly in your project or deploy it in an npm repository
+Ant wilt create an npm package "riux-x.x.x.tgz" file that you can install directly in your project or deploy it in an npm repository
 
 ## To use
 
-To use the react project simply import it in your project as just another NPM library.
+To use the library in a new project simply import the library as you import any another NPM library.
 The main requirements of your project is ES6 and loaders  for CSS/SCSS and images PNG/SVG and fonts.
 
 
@@ -59,7 +59,7 @@ Now you are ready to use the RIUX components in your library.
 
 ### Redux 
 Redux is optional but you will require to use Redux to take the full advantage of RIUX.
-The architechture based on command relay on Redux to pass the command from one UI element to another.
+The architechture based on commands depends on Redux to pass the command from one UI element to another in an efficient way.
 If for some reason you prefer not to use Redux you could still pass the commands as PROPS.
 
 
