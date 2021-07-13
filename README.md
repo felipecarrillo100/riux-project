@@ -48,7 +48,7 @@ In your react code import the desired components. Example:
 import {Desktop, QuickTest, Workspace} from "riux";
 ```
 
-If you prefer a more modular approach you can directly import the modyles from the full path:
+If you prefer a more modular approach you can directly import the modules from the full path:
 ```
 import Desktop from "riux/lib/components/desktop/Desktop";
 ```
