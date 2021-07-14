@@ -8,7 +8,7 @@ class FormProvider {
 
   // Registers a form,  if the form already exists it is replaced.
   public static registerForm(formRecord: FormRecord) {
-    const index = FormProvider.findFormIndexByName(name);
+    const index = FormProvider.findFormIndexByName(formRecord.name);
     if (index === -1) {
       FormProvider.formRegister.push(formRecord);
       return true;
